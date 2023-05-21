@@ -14,6 +14,23 @@
 	--column-margin-top: 4rem;
 	font-family: var(--font-body);
 	color: var(--color-text);
+
+}
+
+@font-face {
+	font-family: 'MontrealBook';
+	src: url('../fonts/PPNeueMontreal-Book.otf') format('truetype'); 
+	/* Add more src lines for different font file formats if you have them */
+}
+@font-face {
+	font-family: 'MontrealMedium';
+	src: url('../fonts/PPNeueMontreal-Medium.otf') format('truetype'); 
+	/* Add more src lines for different font file formats if you have them */
+}
+@font-face {
+	font-family: 'MontrealBold';
+	src: url('../fonts/PPNeueMontreal-Bold.otf') format('truetype'); 
+	/* Add more src lines for different font file formats if you have them */
 }
 
 body {
@@ -33,6 +50,7 @@ body {
 h1,
 h2,
 p {
+	font-family: MontrealBook;
 	font-weight: 400;
 }
 
@@ -43,6 +61,7 @@ p {
 a {
 	color: var(--color-theme-1);
 	text-decoration: none;
+	-webkit-font-smoothing: antialiased;
 }
 
 a:hover {
@@ -50,8 +69,13 @@ a:hover {
 }
 
 h1 {
-	font-size: 2rem;
-	text-align: center;
+	font-size: 68px;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+
+.smooth {
+	-webkit-font-smoothing: antialiased;
 }
 
 h2 {
@@ -88,11 +112,6 @@ button:focus:not(:focus-visible) {
 	outline: none;
 }
 
-@media (min-width: 720px) {
-	h1 {
-		font-size: 2.4rem;
-	}
-}
 
 .visually-hidden {
 	border: 0;
