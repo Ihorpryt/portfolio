@@ -6,19 +6,19 @@
 	import { onMount } from 'svelte';
 	
 
-	onMount(() => {
-		animate(
-			".blink",
-			{ opacity: [1,0,1] },
-  			{ duration: 3, repeat: Infinity },
-			);
+	// onMount(() => {
+	// 	animate(
+	// 		".blink",
+	// 		{ opacity: [1,0,1] },
+  	// 		{ duration: 3, repeat: Infinity },
+	// 		);
 
-		animate(
-			".bg-cover",
-			{ x: '-100vw' },
-  			{ duration: 0.5, delay: 1, allowWebkitAcceleration: true },
-			);	
-	});
+	// 	animate(
+	// 		".bg-cover",
+	// 		{ x: '-100vw' },
+  	// 		{ duration: 0.5, delay: 1, allowWebkitAcceleration: true },
+	// 		);	
+	// });
 	
 
 
@@ -32,24 +32,33 @@
 
 
 
-
-<div class="bg-cover">Hello, I'm Ihor</div>
+<!-- 
+<div class="bg-cover">Hello, I'm Ihor</div> -->
 
 <section>
-	<p class="logo-name smooth" style="text-transform: uppercase;"><span class="blink" style="color:#34c759;">●</span> Ihor</p>
-	<div class="avatar"></div>
-	<h1>Senior UX/UI Designer,<br />Product Designer</h1>
+
+	<div class="main-info">
+		<div class="name">
+			<div class="top-text">
+				<div class="tag">NAME <span class="ua-description">&nbsp⁄ ім’я</span></div>
+				<div class="ua-description">ігор притуляк</div>
+			</div>
+			<div class="main-text">Ihor Prytuliak</div>
+		</div>
+
+	</div>	
+
 
 
 	<div class="hero-image"></div>
 
 	<div class="work-row">
 		<div class="work-element work1">ExpensePulse™ (Portside)</div>
-		<div class="work-element work2">PAX App (Airshare/Portside)</div>
+		<div class="work-element work2">Staffing Marketplace (JetAviation/Portside)</div>
 	</div>
 	<div class="work-row">
-		<div class="work-element work3">Staffing Marketplace (JetAviation/Portside)</div>
-		<div class="work-element work4">Dynamo Kyiv (Linecore)</div>
+		<div class="work-element work3">PAX App (Airshare/Portside)</div>
+		<div class="work-element work4">FC Dynamo Kyiv (Linecore)</div>
 	</div>
 	<div class="work-row">
 		<div class="work-element work5">SANVT (ColorElephant)</div>
@@ -85,23 +94,48 @@
 		font-family: 'MontrealMedium';
 		font-size: 68px;
 	}
-	
-	.logo-name {
+	.main-info {
+		margin-top: 19%;
+		margin-bottom: 20%;
+	}
+	/* Green Card */
+	.name {
+		background: #C2EF56;
+		border-radius: 10px;
+		padding: 14px 20px;
+		width: 370px;
+	}
+	.top-text {
+		display: flex;
+		justify-content: space-between;
+	}
+	.ua-description {
+		font-weight: 400;
+		opacity: 0.5;
 		font-family: 'MontrealBook';
-		width: fit-content;
-		padding: 0px 6px 0px 4px;
-		border: 1px solid var(--color-text);
-		border-radius: 12px;
 	}
-	.avatar {
-		height: 100px;
-		width: 100px;
-		border-radius: 100px;
-		background-color: #ff6d1b;
-	}
-	h1 {
+	.tag {
+		font-family: 'MontrealMedium';
+		font-size: 16px;
+		font-weight: 500;
+		line-height: 19px;
+		letter-spacing: 0em;
 		text-align: left;
+		color: rgba(0, 0, 0, 0.7);
 	}
+	.main-text {
+		font-family: 'MontrealMedium';
+		font-size: 68px;
+		font-weight: 500;
+		line-height: 68px;
+		letter-spacing: -0.02em;
+		text-align: left;
+		color: rgba(0, 0, 0, 0.7);
+
+	}
+	/* Green Card */
+
+
 
 	.work-row {
 		display: flex;
@@ -124,7 +158,7 @@
 	}
 	.work3 {
 		flex-grow: 1;
-		background-color:cadetblue;
+		background: linear-gradient(to bottom right, #ff9a9e, #fad0c4);
 	}
 	.work4 {
 		flex-grow: 2;
