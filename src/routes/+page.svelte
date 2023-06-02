@@ -45,7 +45,19 @@
 			</div>
 			<div class="main-text">Ihor Prytuliak</div>
 		</div>
-
+		<div class="position">
+			<div class="top-text">
+				<div class="tag">ROLE <span class="ua-description">&nbsp⁄ роль</span></div>
+				<div class="ua-description">дизайнер інтерфейсів</div>
+			</div>
+			<div class="main-text">Senior UX/UI Designer</div>
+		</div>
+		<div class="talk">
+			<div class="top-text">
+				<div class="ua-description">зв’язатись</div>
+			</div>
+			<div class="main-text">Talk</div>
+		</div>
 	</div>	
 
 
@@ -97,13 +109,27 @@
 	.main-info {
 		margin-top: 19%;
 		margin-bottom: 20%;
+		display: flex;
+		gap: 16px;
 	}
-	/* Green Card */
+	/* Main Info Cards */
 	.name {
 		background: #C2EF56;
 		border-radius: 10px;
 		padding: 14px 20px;
 		width: 370px;
+	}
+	.position {
+		background: #B9ACF2;
+		border-radius: 10px;
+		padding: 14px 20px;
+		width: 685px;
+	}
+	.talk {
+		border-radius: 10px;
+		padding: 14px 20px;
+		width: 190px;
+		box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.7);
 	}
 	.top-text {
 		display: flex;
@@ -133,7 +159,7 @@
 		color: rgba(0, 0, 0, 0.7);
 
 	}
-	/* Green Card */
+	/* Main Info Cards */
 
 
 
