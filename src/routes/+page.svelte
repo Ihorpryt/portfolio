@@ -1,9 +1,12 @@
 <script>
-	import welcome from '$lib/images/svelte-welcome.webp';
-	import welcome_fallback from '$lib/images/svelte-welcome.png';
+	// import welcome from '$lib/images/svelte-welcome.webp';
+	// import welcome_fallback from '$lib/images/svelte-welcome.png';
 
-	import { animate } from "motion";
-	import { onMount } from 'svelte';
+	// import { animate } from "motion";
+	// import { onMount } from 'svelte';
+    import Message from '$lib/icons/Message.svelte';
+    import Vector1 from '$lib/icons/Vector 1.svelte';
+    import Vector2 from '$lib/icons/Vector 2.svelte';
 	
 
 	// onMount(() => {
@@ -45,18 +48,21 @@
 			</div>
 			<div class="main-text">Ihor Prytuliak</div>
 		</div>
+		<Vector1 />
 		<div class="position">
 			<div class="top-text">
 				<div class="tag">ROLE <span class="ua-description">&nbsp⁄ роль</span></div>
 				<div class="ua-description">дизайнер інтерфейсів</div>
 			</div>
 			<div class="main-text">Senior UX/UI Designer</div>
+			<div class="add-info">USER EXPERIENCE &nbsp⁄&nbsp USER INTERFACE</div>
 		</div>
+		<Vector2 />
 		<div class="talk">
 			<div class="top-text">
 				<div class="ua-description">зв’язатись</div>
 			</div>
-			<div class="main-text">Talk</div>
+			<div class="main-text">Talk<span class="blink"><Message /></span></div>
 		</div>
 	</div>	
 
@@ -91,7 +97,7 @@
 		padding: 0 3rem;
 	}
 	
-	.bg-cover {
+	/* .bg-cover {
 		height: 100vh;
 		width: 100vw;
 		background-color: #ff6d1b;
@@ -105,7 +111,8 @@
 		align-items: center;
 		font-family: 'MontrealMedium';
 		font-size: 68px;
-	}
+	} */
+	
 	.main-info {
 		margin-top: 19%;
 		margin-bottom: 20%;
@@ -123,12 +130,12 @@
 		background: #B9ACF2;
 		border-radius: 10px;
 		padding: 14px 20px;
-		width: 685px;
+		width: 650px;
 	}
 	.talk {
 		border-radius: 10px;
 		padding: 14px 20px;
-		width: 190px;
+		width: 140px;
 		box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.7);
 	}
 	.top-text {
@@ -159,8 +166,21 @@
 		color: rgba(0, 0, 0, 0.7);
 
 	}
+	.add-info {
+		position: absolute;
+		margin-top: 30px;
+		margin-left: 8px;
+		font-family: 'MontrealBook';
+		letter-spacing: 0.84em;
+		text-transform: uppercase;
+		font-size: 14px;
+		line-height: 17px;
+	}
+	.blink {
+		position: absolute;
+    	margin-top: -38px;
+	}
 	/* Main Info Cards */
-
 
 
 	.work-row {

@@ -4,7 +4,7 @@
 </script>
 
 <div class="app">
-	<Header />
+	<!-- <Header /> -->
 
 	<main>
 		<slot />
@@ -30,7 +30,7 @@
 		margin: 0 auto;
 	}
 
-	footer {
+	/* footer {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
@@ -46,5 +46,5 @@
 		footer {
 			padding: 12px 0;
 		}
-	}
+	} */
 </style>
