@@ -14,16 +14,13 @@
 	<nav>
 		<ul>
 			<li aria-current={$page.url.pathname === '/' ? 'page' : undefined}>
-				<a href="/">Portfolio</a>
+				<a href="/">Portfolio <span class="ua-description">&nbsp &nbsp⁄ портфоліо</span></a>
 			</li>
 			<li aria-current={$page.url.pathname === '/about' ? 'page' : undefined}>
-				<a href="/about">About</a>
+				<a href="/about">About <span class="ua-description">&nbsp &nbsp⁄ про мене</span></a>
 			</li>
 			<li aria-current={$page.url.pathname.startsWith('/resources') ? 'page' : undefined}>
-				<a href="/resources">Resources</a>
-			</li>
-			<li aria-current={$page.url.pathname.startsWith('/contact') ? 'page' : undefined}>
-				<a href="/contact">Contact</a>
+				<a href="/resources">Resources <span class="ua-description">&nbsp &nbsp⁄ ресурси</span></a>
 			</li>
 		</ul>
 	</nav>
@@ -45,19 +42,8 @@
 		display: flex;
 		justify-content: center;
 		position: fixed;
-    	bottom: 16px;
-		width: 100%;
-		height: 60px;
- 		max-width: 500px;
-		left: 50%;
-		-webkit-transform: translate(-50%, -24px);
+    	bottom: 74px;
 		transition: transform .4s cubic-bezier(.165,.84,.44,1);
-		transform: translate(-50%);
-
-		-webkit-backdrop-filter: blur(16px);
-		backdrop-filter: blur(16px);
-		background-color: rgba(246,246,246,.5);
-		border-radius: 60px;
 	}
 
 
@@ -78,7 +64,8 @@
 	li {
 		/* position: relative;
 		height: 100%; */
-		padding: 12px 24px;
+		/* padding: 12px 24px; */
+		margin-right: 54px;
 	}
 
 	/* li[aria-current='page']::before {
@@ -93,23 +80,27 @@
 		border-top: var(--size) solid var(--color-theme-1);
 	} */
 	li[aria-current='page'] {
-		background-color: white;
+		color: brown;
 		border-radius: 200px;
 	}
 
 	nav a {
-		font-family: MontrealBook;
+		font-family: 'MontrealMedium';
 		display: flex;
 		align-items: center;
 		padding: 0 0.5rem;
 		color: var(--color-text);
-		font-weight: 700;
 		font-size: 16px;
 		text-decoration: none;
 		transition: color 0.2s linear;
+		-webkit-font-smoothing: antialiased;
 	}
 
 	a:hover {
 		color: var(--color-theme-1);
+	}
+	.ua-description {
+		opacity: 0.5;
+		font-family: 'MontrealBook';
 	}
 </style>
