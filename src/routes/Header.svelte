@@ -10,7 +10,7 @@
 
 	<header>
 		{#if scrollPosition < 580}
-		<nav class="blink">
+		<nav>
 			<ul>
 				<li aria-current={$page.url.pathname === '/' ? 'page' : undefined}>
 					<a href="{$page.url.pathname === '/' ? '#main' : '/'}">Start <span class="ua-description">&nbsp &nbsp⁄ старт</span></a>
@@ -29,7 +29,7 @@
 		{/if}
 		{#if scrollPosition > 580}
 		<div class="sticky">
-		   <nav class="blink">
+		   <nav>
 			   <ul>
 				   <li aria-current={$page.url.pathname === '/' ? 'page' : undefined}>
 					   <a href="{$page.url.pathname === '/' ? '#main' : '/'}">Start <span class="ua-description">&nbsp &nbsp⁄ старт</span></a>

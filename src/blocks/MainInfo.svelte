@@ -1,6 +1,7 @@
 <script>
 	// import welcome from '$lib/images/svelte-welcome.webp';
 	// import welcome_fallback from '$lib/images/svelte-welcome.png';
+	import src from '$lib/images/avatar.png'
 
 	// import { animate } from "motion";
 	// import { onMount } from 'svelte';
@@ -8,7 +9,6 @@
     import Vector1 from '$lib/icons/Vector 1.svelte';
     import Vector2 from '$lib/icons/Vector 2.svelte';
 
-	let src = 'src/lib/images/avatar.png'
 	
 
 	// onMount(() => {

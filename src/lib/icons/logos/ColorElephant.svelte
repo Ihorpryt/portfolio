@@ -1,5 +1,5 @@
 <script>
-    let src = 'src/lib/images/colorelephant.png'
+    import src from '$lib/images/colorelephant.png'
     
 </script>
 
