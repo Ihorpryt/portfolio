@@ -1,10 +1,10 @@
 <script>
 
     import FeaturedClients from '../blocks/FeaturedClients.svelte';
-import HeroImage from '../blocks/HeroImage.svelte';
     import MainInfo from '../blocks/MainInfo.svelte';
     import ExpensePulse from '../blocks/ProjectCards/ExpensePulse.svelte';
     import StaffingMarketplace from '../blocks/ProjectCards/StaffingMarketplace.svelte';
+    import Header from './Header.svelte';
 	
 
 </script>
@@ -19,18 +19,20 @@ import HeroImage from '../blocks/HeroImage.svelte';
 <!-- 
 <div class="bg-cover">Hello, I'm Ihor</div> -->
 
-<section>
+<section id="main">
 
 	<MainInfo />
 
-	<div class="work">Work ↓</div>
+	<div class="bottom">
+		<Header />
+		<div class="work">Work ↓</div>
+	</div>
 
-	<HeroImage />
-	<FeaturedClients />
-
-	<div class="work-row">
+	<div class="work-row" id="portfolio">
 		<ExpensePulse />
 		<StaffingMarketplace />
+		<FeaturedClients />
+		<ExpensePulse />
 	</div>
 	<!-- <div class="work-row">
 		<div class="work-element work3">PAX App (Airshare/Portside)</div>
@@ -70,23 +72,25 @@ import HeroImage from '../blocks/HeroImage.svelte';
 		font-family: 'MontrealMedium';
 		font-size: 68px;
 	} */
-
+	.bottom {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 32px;
+		margin-top: -175px;
+	}
 	.work {
 		font-family: 'MontrealMedium';
 		font-size: 128px;
 		height: 128px;
-		position: absolute;
-		bottom: 82px;
-		right: 48px;
-		background: linear-gradient(to right, #383449 0%, #383449 35%, #E56A26 100%);;
+		background: linear-gradient(to right, #000 0%, #383449 35%, #E56A26 100%);;
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
 	}
 	.work-row {
 		display: flex;
-		flex-direction: row;
+		flex-direction: column;
 		width: 100%;
-		gap: 24px;
+		gap: 48px;
 		margin-top: 24px;
 	}
 </style>

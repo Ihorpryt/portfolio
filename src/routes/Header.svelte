@@ -1,61 +1,107 @@
 <script>
 	import { page } from '$app/stores';
-	import logo from '$lib/images/svelte-logo.svg';
-	import github from '$lib/images/github.svg';
+
+	let scrollPosition = 0;
+
 </script>
 
-<header>
-	<!-- <div class="corner">
-		<a href="https://kit.svelte.dev">
-			<img src={logo} alt="SvelteKit" />
-		</a>
-	</div> -->
+<svelte:window bind:scrollY={scrollPosition}/>
 
-	<nav>
-		<ul>
-			<li aria-current={$page.url.pathname === '/' ? 'page' : undefined}>
-				<a href="/">Portfolio <span class="ua-description">&nbsp &nbsp⁄ портфоліо</span></a>
-			</li>
-			<li aria-current={$page.url.pathname === '/about' ? 'page' : undefined}>
-				<a href="/about">About <span class="ua-description">&nbsp &nbsp⁄ про мене</span></a>
-			</li>
-			<li aria-current={$page.url.pathname.startsWith('/resources') ? 'page' : undefined}>
-				<a href="/resources">Resources <span class="ua-description">&nbsp &nbsp⁄ ресурси</span></a>
-			</li>
-		</ul>
-	</nav>
 
-	<!-- <div class="corner">
-		<a href="https://github.com/sveltejs/kit">
-			<img src={github} alt="GitHub" />
-		</a>
-	</div> -->
-</header>
+	<header>
+		{#if scrollPosition < 580}
+		<nav class="blink">
+			<ul>
+				<li aria-current={$page.url.pathname === '/' ? 'page' : undefined}>
+					<a href="{$page.url.pathname === '/' ? '#main' : '/'}">Start <span class="ua-description">&nbsp &nbsp⁄ старт</span></a>
+				</li>
+				<li aria-current={$page.url.pathname === '/' ? 'page' : undefined}>
+					<a href="{$page.url.pathname === '/' ? '#portfolio' : '/#portfolio'}">Portfolio <span class="ua-description">&nbsp &nbsp⁄ портфоліо</span></a>
+				</li>
+				<li aria-current={$page.url.pathname === '/about' ? 'page' : undefined}>
+					<a href="/about">About <span class="ua-description">&nbsp &nbsp⁄ про мене</span></a>
+				</li>
+				<li aria-current={$page.url.pathname.startsWith('/resources') ? 'page' : undefined}>
+					<a href="/resources">Resources <span class="ua-description">&nbsp &nbsp⁄ ресурси</span></a>
+				</li>
+			</ul>
+		</nav>
+		{/if}
+		{#if scrollPosition > 580}
+		<div class="sticky">
+		   <nav class="blink">
+			   <ul>
+				   <li aria-current={$page.url.pathname === '/' ? 'page' : undefined}>
+					   <a href="{$page.url.pathname === '/' ? '#main' : '/'}">Start <span class="ua-description">&nbsp &nbsp⁄ старт</span></a>
+				   </li>
+				   <li aria-current={$page.url.pathname === '/' ? 'page' : undefined}>
+					   <a href="{$page.url.pathname === '/' ? '#portfolio' : '/#portfolio'}">Portfolio <span class="ua-description">&nbsp &nbsp⁄ портфоліо</span></a>
+				   </li>
+				   <li aria-current={$page.url.pathname === '/about' ? 'page' : undefined}>
+					   <a href="/about">About <span class="ua-description">&nbsp &nbsp⁄ про мене</span></a>
+				   </li>
+				   <li aria-current={$page.url.pathname.startsWith('/resources') ? 'page' : undefined}>
+					   <a href="/resources">Resources <span class="ua-description">&nbsp &nbsp⁄ ресурси</span></a>
+				   </li>
+			   </ul>
+		   </nav>
+		</div>
+	   {/if}
+	</header>
+	
+
 
 <style>
+
+	.sticky {
+		background: red;
+		position: fixed;
+		width: 100%;
+		height: 48px;
+		top: 0;
+		left:0px;
+		animation-duration: 0.3s;
+  		animation-name: slidein;
+	}
+
 	header {
 		display: flex;
 		justify-content: space-between;
+		transition: 0.3s;
+		opacity: 1;
 	}
 
 	nav {
 		display: flex;
 		justify-content: center;
-		position: fixed;
     	bottom: 74px;
 		transition: transform .4s cubic-bezier(.165,.84,.44,1);
+
+		animation-duration: 0.3s;
+  		animation-name: slidein;
 	}
 
+	@keyframes slidein {
+		from {
+			opacity: 0;
+			margin-top: -48px;
+		}
+
+		to {
+			opacity: 1;
+			margin-top: 0;
+		}
+	}
 
 
 	ul {
 		position: relative;
-		padding: 0px 48px;
+		padding: 0;
 		margin: 0;
 		width: 100%;
 		display: flex;
 		justify-content: space-between;
-		align-items: center;
+		align-items: flex-end;
 		list-style: none;
 		background: var(--background);
 		background-size: contain;

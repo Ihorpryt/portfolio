@@ -7,7 +7,8 @@
     import Message from '$lib/icons/Message.svelte';
     import Vector1 from '$lib/icons/Vector 1.svelte';
     import Vector2 from '$lib/icons/Vector 2.svelte';
-    import HeroImage from '../blocks/HeroImage.svelte';
+
+	let src = 'src/lib/images/avatar.png'
 	
 
 	// onMount(() => {
@@ -30,6 +31,8 @@
 </script>
 
 <div class="main-info">
+	<img {src} alt="avatar">
+
     <div class="name">
         <div class="top-text">
             <div class="tag">NAME <span class="ua-description">&nbsp⁄ ім’я</span></div>
@@ -37,7 +40,9 @@
         </div>
         <div class="main-text">Ihor Prytuliak</div>
     </div>
+
     <Vector1 />
+
     <div class="position">
         <div class="top-text">
             <div class="tag">ROLE <span class="ua-description">&nbsp⁄ роль</span></div>
@@ -46,7 +51,7 @@
         <div class="main-text">Senior UX/UI Designer</div>
         <div class="add-info">USER EXPERIENCE &nbsp⁄&nbsp USER INTERFACE</div>
     </div>
-    <Vector2 />
+    <!-- <Vector2 /> -->
     <div class="talk">
         <div class="top-text">
             <div class="ua-description">зв’язатись</div>
@@ -57,7 +62,9 @@
 
 
 <style>
-
+	img {
+        height: 115px;
+    }
 	.main-info {
 		margin-top: 19%;
 		margin-bottom: 23%;

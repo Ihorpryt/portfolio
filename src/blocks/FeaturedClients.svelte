@@ -9,7 +9,6 @@
 
 </script>
 <section>
-    <div class="tag">FEATURED CLIENTS <span class="ua-description">&nbsp⁄ клієнти</span></div>
     <div class="logos"> 
 
         <div class="logo"><Portside /></div> 
@@ -34,7 +33,6 @@
 		flex-direction: column;
 		/* justify-content: center; */
         align-items: center;
-        margin-top: 48px;
     }
     .logos {
         display: flex;
@@ -52,17 +50,5 @@
         width: 100%;
         height: 115px;
     }
-    .tag {
-		font-family: 'MontrealMedium';
-		font-size: 16px;
-		line-height: 19px;
-		color:var(--color-text);
-        margin-left: 60px;
-		-webkit-font-smoothing: antialiased;
-	}
-	.ua-description {
-		opacity: 0.5;
-		font-family: 'MontrealBook';
-		-webkit-font-smoothing: antialiased;
-	}
+
 </style>
