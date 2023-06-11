@@ -9,7 +9,6 @@
 
 
 	<header>
-		{#if scrollPosition < 580}
 		<nav>
 			<ul>
 				<li aria-current={$page.url.pathname === '/' ? 'page' : undefined}>
@@ -26,9 +25,10 @@
 				</li>
 			</ul>
 		</nav>
-		{/if}
-		{#if scrollPosition > 580}
+
+		{#if scrollPosition > 700}
 		<div class="sticky">
+				
 		   <nav>
 			   <ul>
 				   <li aria-current={$page.url.pathname === '/' ? 'page' : undefined}>
@@ -45,6 +45,9 @@
 				   </li>
 			   </ul>
 		   </nav>
+		   	<a href="#">
+		   		<div class="btn">Contact (email) ►</div>
+			</a>
 		</div>
 	   {/if}
 	</header>
@@ -54,14 +57,39 @@
 <style>
 
 	.sticky {
-		background: red;
+		padding:0 48px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		background: rgba(255, 255, 255, 0.01);
+		-webkit-backdrop-filter: saturate(180%) blur(20px);
+		backdrop-filter: saturate(180%) blur(8px);
 		position: fixed;
-		width: 100%;
-		height: 48px;
+		height: 40px;
 		top: 0;
-		left:0px;
+		left:0;
+		right: 0;
 		animation-duration: 0.3s;
   		animation-name: slidein;
+	}
+	.sticky a {
+		font-size: 14px;
+	}
+
+	.sticky li {
+		margin-right: 24px;
+	}
+
+	.sticky:after {
+		content: "";
+		display: block;
+		position: absolute;
+		top: 100%;
+		left: 0;
+		width: 100%;
+		height: 1px;
+		z-index: 1;
+		background: rgba(0,0,0,1);
 	}
 
 	header {
@@ -84,12 +112,12 @@
 	@keyframes slidein {
 		from {
 			opacity: 0;
-			margin-top: -48px;
+			
 		}
 
 		to {
 			opacity: 1;
-			margin-top: 0;
+			
 		}
 	}
 
@@ -148,5 +176,23 @@
 	.ua-description {
 		opacity: 0.5;
 		font-family: 'MontrealBook';
+	}
+	.btn {
+		background-color: #1d1d1f;
+		border-radius: 20px;
+		color: white;
+		border: none;
+		font-family: 'MontrealMedium';
+		font-size: 12px;
+		padding: 6px 12px;
+		z-index: 5;
+		text-decoration: none;
+		text-transform: uppercase;
+	}
+	.btn:hover {
+		background-color: #272729;
+	}
+	a {
+		text-decoration: none;
 	}
 </style>

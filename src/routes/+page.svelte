@@ -25,13 +25,17 @@
 
 	<div class="bottom">
 		<Header />
-		<div class="work">Work ↓</div>
+		<a href="#portfolio">
+			<div class="work">Work ↓</div>
+		</a>
 	</div>
 
 	<div class="work-row" id="portfolio">
 		<ExpensePulse />
 		<StaffingMarketplace />
 		<FeaturedClients />
+		<ExpensePulse />
+		<ExpensePulse />
 		<ExpensePulse />
 	</div>
 	<!-- <div class="work-row">
@@ -82,7 +86,13 @@
 		font-family: 'MontrealMedium';
 		font-size: 128px;
 		height: 128px;
-		background: linear-gradient(to right, #000 0%, #383449 35%, #E56A26 100%);;
+		background: linear-gradient(to right, #000 0%, #383449 35%, #E56A26 100%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		transition: 0.3s;
+	}
+	.work:hover {
+		background: linear-gradient(to right, #E56A26 0%, #E56A26 100%);
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
 	}
@@ -92,5 +102,8 @@
 		width: 100%;
 		gap: 48px;
 		margin-top: 24px;
+	}
+	a {
+		text-decoration: none;
 	}
 </style>
