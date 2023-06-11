@@ -28,7 +28,7 @@
 
 		{#if scrollPosition > 700}
 		<div class="sticky">
-				
+				<p>Ihor</p>
 		   <nav>
 			   <ul>
 				   <li aria-current={$page.url.pathname === '/' ? 'page' : undefined}>
@@ -61,7 +61,7 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		background: rgba(255, 255, 255, 0.01);
+		background: rgb(222, 235, 247, 0.7);
 		-webkit-backdrop-filter: saturate(180%) blur(20px);
 		backdrop-filter: saturate(180%) blur(8px);
 		position: fixed;
@@ -80,7 +80,7 @@
 		margin-right: 24px;
 	}
 
-	.sticky:after {
+	/* .sticky:after {
 		content: "";
 		display: block;
 		position: absolute;
@@ -90,7 +90,7 @@
 		height: 1px;
 		z-index: 1;
 		background: rgba(0,0,0,1);
-	}
+	} */
 
 	header {
 		display: flex;
