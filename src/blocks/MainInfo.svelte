@@ -2,8 +2,11 @@
 	// import welcome from '$lib/images/svelte-welcome.webp';
 	// import welcome_fallback from '$lib/images/svelte-welcome.png';
 	import src from '$lib/images/avatar.png'
+	import {onMount} from 'svelte';
 
-	// import { animate } from "motion";
+	import { animate } from "motion";
+	import {gsap} from "gsap";
+
 	// import { onMount } from 'svelte';
     import Message from '$lib/icons/Message.svelte';
     import Vector1 from '$lib/icons/Vector 1.svelte';
@@ -11,27 +14,32 @@
 
 	
 
-	// onMount(() => {
-	// 	animate(
-	// 		".blink",
-	// 		{ opacity: [1,0,1] },
-  	// 		{ duration: 3, repeat: Infinity },
-	// 		);
+	onMount(() => {
+		// animate(
+		// 	".blink",
+		// 	{ opacity: [1,0,1] },
+  		// 	{ duration: 3, repeat: Infinity },
+		// 	);
 
-	// 	animate(
-	// 		".bg-cover",
-	// 		{ x: '-100vw' },
-  	// 		{ duration: 0.5, delay: 1, allowWebkitAcceleration: true },
-	// 		);	
-	// });
-	
+		// animate(
+		// 	".bg-cover",
+		// 	{ x: '-100vw' },
+  		// 	{ duration: 0.5, delay: 1, allowWebkitAcceleration: true },
+		// 	);
 
+		gsap.to(".main-info", { opacity: 1, duration: 0.5});
+		gsap.from(".avatar", { opacity: 0, duration: 1});
+		gsap.from(".name", { opacity: 0, width:0, duration: 1, delay:0.5});
+		gsap.from(".vector", { opacity: 0, duration: 1, delay:1});
+		gsap.from(".position", { opacity: 0, width:0, duration: 1, delay:1.5});
+		gsap.from(".talk-animation", { opacity: 0, width:0, duration: 1, delay:2});
+	});
 
 
 </script>
 
 <div class="main-info">
-	<img {src} alt="avatar">
+	<img {src} alt="avatar" class="avatar" >
 
     <div class="name">
         <div class="top-text">
@@ -41,7 +49,9 @@
         <div class="main-text">Ihor Prytuliak</div>
     </div>
 
+	<div class="vector">
     <Vector1 />
+	</div>
 
     <div class="position">
         <div class="top-text">
@@ -49,11 +59,11 @@
             <div class="ua-description">дизайнер інтерфейсів</div>
         </div>
         <div class="main-text">Senior UX/UI Designer</div>
-        <div class="add-info">USER EXPERIENCE &nbsp⁄&nbsp USER INTERFACE</div>
+        <!-- <div class="add-info">USER EXPERIENCE &nbsp⁄&nbsp USER INTERFACE</div> -->
     </div>
     <!-- <Vector2 /> -->
 	<a href="#">
-		<div class="talk">
+		<div class="talk talk-animation">
 			<div class="top-text">
 				<div class="ua-description">зв’язатись</div>
 			</div>
@@ -77,25 +87,32 @@
 		display: flex;
 		gap: 16px;
 		width: 100%;
+		opacity: 0;
 	}
 	.name {
 		background: #C2EF56;
 		border-radius: 10px;
 		padding: 14px 20px;
 		width: 370px;
+		overflow: hidden;
+		white-space: nowrap;
 	}
 	.position {
 		background: #B9ACF2;
 		border-radius: 10px;
 		padding: 14px 20px;
 		width: 650px;
+		overflow: hidden;
+		white-space: nowrap;
 	}
 	.talk {
 		border-radius: 10px;
 		padding: 14px 20px;
 		width: 150px;
 		box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.7);
-		transition: 0.3s;
+		transition: background-color 0.3s;
+		overflow: hidden;
+		white-space: nowrap;
 	}
 	.message {
 		fill: #47484A;

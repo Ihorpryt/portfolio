@@ -4,7 +4,7 @@
     import MainInfo from '../blocks/MainInfo.svelte';
     import ExpensePulse from '../blocks/ProjectCards/ExpensePulse.svelte';
     import StaffingMarketplace from '../blocks/ProjectCards/StaffingMarketplace.svelte';
-    import Header from './Header.svelte';
+    import Header from './Menu.svelte';
 	
 
 </script>
@@ -21,14 +21,9 @@
 
 <section id="main">
 
-	<MainInfo />
+	<Header />
 
-	<div class="bottom">
-		<Header />
-		<a href="#portfolio">
-			<div class="work">Work ↓</div>
-		</a>
-	</div>
+	<MainInfo />
 
 	<div class="work-row" id="portfolio">
 		<ExpensePulse />
@@ -61,49 +56,12 @@
 		padding: 0 3rem;
 	}
 	
-	/* .bg-cover {
-		height: 100vh;
-		width: 100vw;
-		background-color: #ff6d1b;
-		position: fixed;
-		inset: 0px;
-		z-index: 99;
-
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		font-family: 'MontrealMedium';
-		font-size: 68px;
-	} */
-	.bottom {
-		display: flex;
-		justify-content: space-between;
-		margin-bottom: 32px;
-		margin-top: -175px;
-	}
-	.work {
-		font-family: 'MontrealMedium';
-		font-size: 128px;
-		height: 128px;
-		background: linear-gradient(to right, #000 0%, #383449 35%, #E56A26 100%);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		transition: 0.3s;
-	}
-	.work:hover {
-		background: linear-gradient(to right, #E56A26 0%, #E56A26 100%);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-	}
 	.work-row {
 		display: flex;
 		flex-direction: column;
 		width: 100%;
 		gap: 48px;
-		margin-top: 24px;
-	}
-	a {
-		text-decoration: none;
+		padding-top: 48px;
+		margin-top: -90px;
 	}
 </style>

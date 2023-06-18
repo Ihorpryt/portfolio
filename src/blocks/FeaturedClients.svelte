@@ -33,6 +33,7 @@
 		flex-direction: column;
 		/* justify-content: center; */
         align-items: center;
+        z-index: -1;
     }
     .logos {
         display: flex;
