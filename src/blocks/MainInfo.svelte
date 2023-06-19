@@ -28,7 +28,7 @@
 		// 	);
 
 		gsap.to(".main-info", { opacity: 1, duration: 0.5});
-		gsap.from(".avatar", { opacity: 0, duration: 1});
+		gsap.from(".avatar", { keyframes: {opacity: [0,1,0,1,0,1]}, duration: 1});
 		gsap.from(".name", { opacity: 0, width:0, duration: 1, delay:0.5});
 		gsap.from(".vector", { opacity: 0, duration: 1, delay:1});
 		gsap.from(".position", { opacity: 0, width:0, duration: 1, delay:1.5});

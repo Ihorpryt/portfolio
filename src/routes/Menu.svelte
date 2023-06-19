@@ -11,10 +11,10 @@
 		<nav>
 			<ul>
 				<li aria-current={$page.url.pathname === '/' ? 'page' : undefined}>
-					<a href="{$page.url.pathname === '/' ? '#portfolio' : '/#portfolio'}">Portfolio</a>
+					<a href="{$page.url.pathname === '/' ? '#portfolio' : '/#portfolio'}">Work</a>
 				</li>
 				<li aria-current={$page.url.pathname === '/about' ? 'page' : undefined}>
-					<a href="/about">About</a>
+					<a href="/about">Info</a>
 				</li>
 				<li aria-current={$page.url.pathname.startsWith('#') ? 'page' : undefined}>
 					<a href="#">Email</a>
@@ -39,6 +39,8 @@
 		animation: fade 1s forwards; 
 		animation-delay: 3s;
 		transition: bottom 0.3s;
+
+		z-index: 50;
 	}
 	@keyframes fade {
 		0% {
