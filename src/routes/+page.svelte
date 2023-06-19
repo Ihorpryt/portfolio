@@ -25,6 +25,9 @@
 
 	<MainInfo />
 
+	<iframe src='https://my.spline.design/glassspheres-babee2be1ebcecb767457ea34f7f5e5a/' frameborder='0' width='100%' height='100%'></iframe>
+
+
 	<div class="work-row" id="portfolio">
 		<ExpensePulse />
 		<StaffingMarketplace />
@@ -64,4 +67,24 @@
 		padding-top: 48px;
 		margin-top: -90px;
 	}
+	iframe {
+		position: absolute;
+		z-index: 0;
+		left:-170px;
+		bottom: 40px;
+		opacity: 0;
+		animation: fade 3s forwards;
+	}
+	@keyframes fade {
+		0% {
+			opacity: 0;
+		}
+		50% {
+			opacity: 0;
+		}
+		100% {
+			opacity: 1;
+		}
+	}
+
 </style>

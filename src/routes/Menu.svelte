@@ -10,6 +10,7 @@
 	<header class:bottom={y != 0}>
 		<nav>
 			<ul>
+				<div class="shine"></div>
 				<li aria-current={$page.url.pathname === '/' ? 'page' : undefined}>
 					<a href="{$page.url.pathname === '/' ? '#portfolio' : '/#portfolio'}">Work</a>
 				</li>
@@ -35,8 +36,8 @@
 		right: 50%;
 		bottom: 48px;
 		justify-content:center;
-		opacity: 0;
-		animation: fade 1s forwards; 
+		/* opacity: 0;
+		animation: fade 1s forwards;  */
 		animation-delay: 3s;
 		transition: bottom 0.3s;
 
@@ -69,7 +70,7 @@
 		animation-delay: 0.3s;
 	}
 
-
+	
 	ul {
 		margin: 0;
 		padding: 12px;
@@ -80,8 +81,17 @@
 		background-color: #333;
 		border-radius: 100px;
 		gap: 8px;
+		border: 1px solid rgb(255 255 255 / 8%);
 	}
-
+	.shine {
+		height: 1px;
+		width: 400px;
+		background: linear-gradient(90deg, rgba(0, 0, 0, 0), #373735 20%, #ffffff 67.19%, rgba(0, 0, 0, 0));
+		z-index: 99;
+		top: -1px;
+		opacity: 0.6;
+		position: absolute;
+	}
 	li {
 		height: 100%;
 		display: flex;

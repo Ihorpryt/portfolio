@@ -88,6 +88,7 @@
 		gap: 16px;
 		width: 100%;
 		opacity: 0;
+		z-index: 3;
 	}
 	.name {
 		background: #C2EF56;
@@ -176,5 +177,8 @@
 	}
 	a {
 		text-decoration: none;
+	}
+	.vector {
+		opacity: 1;
 	}
 </style>
