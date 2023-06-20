@@ -2,9 +2,9 @@
 
     import FeaturedClients from '../blocks/FeaturedClients.svelte';
     import MainInfo from '../blocks/MainInfo.svelte';
-    import ExpensePulse from '../blocks/ProjectCards/ExpensePulse.svelte';
-    import StaffingMarketplace from '../blocks/ProjectCards/StaffingMarketplace.svelte';
+    import Card from '../blocks/ProjectCards/Card.svelte';
     import Header from './Menu.svelte';
+	import cover from '$lib/images/Card 2.jpg'
 	
 
 </script>
@@ -25,16 +25,20 @@
 
 	<MainInfo />
 
-	<iframe src='https://my.spline.design/glassspheres-babee2be1ebcecb767457ea34f7f5e5a/' frameborder='0' width='100%' height='100%'></iframe>
+	<!-- <iframe src='https://my.spline.design/glassspheres-babee2be1ebcecb767457ea34f7f5e5a/' frameborder='0' width='100%' height='100%'></iframe> -->
 
 
 	<div class="work-row" id="portfolio">
-		<ExpensePulse />
-		<StaffingMarketplace />
-		<FeaturedClients />
-		<ExpensePulse />
-		<ExpensePulse />
-		<ExpensePulse />
+		<Card
+			cover={cover}
+			title="ExpensePulse™"
+			description="Changing the way business aviation trip expenses are compiled, audited, and reported."
+		 />
+		 <Card
+			cover={cover}
+			title="Staffing Marketplace™"
+			description="Connecting job seekers and employers for full-time and part-time opportunities as well as temporary assignments."
+		 />
 	</div>
 	<!-- <div class="work-row">
 		<div class="work-element work3">PAX App (Airshare/Portside)</div>

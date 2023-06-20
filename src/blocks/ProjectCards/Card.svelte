@@ -1,5 +1,8 @@
 <script>
-	import cover from '$lib/images/Card 2.jpg'
+
+	export let cover;
+	export let title;
+	export let description;
 </script>
 <a href="#">
 	<div class="work-element">
@@ -7,8 +10,8 @@
 			<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 				<path fill-rule="evenodd" clip-rule="evenodd" d="M7.68012 0H23.8801V16.2H22.8236V8.1C22.8236 4.21 19.6702 1.05652 15.7801 1.05652C11.8901 1.05652 8.73664 4.20998 8.73664 8.1V16.2H7.68012V0ZM16.3201 7.8V24H0.120117L0.120118 7.8H1.17664V15.9C1.17664 19.79 4.33011 22.9435 8.22012 22.9435C12.1102 22.9435 15.2636 19.79 15.2636 15.9V7.8H16.3201Z" fill="black"/>
 			</svg>
-			<div class="title">ExpensePulse™</div>
-			<div class="description">Changing the way business aviation trip expenses are compiled, audited, and reported.</div>
+			<div class="title">{title}</div>
+			<div class="description"> {description} </div>
 		</div>
 		<img src={cover} alt="">
 	</div>
@@ -21,7 +24,7 @@
 		align-items: flex-end;
 		min-height: 420px;
 		border-radius: 20px;
-        background-color: #F2C04B;
+        /* background-color: #F2C04B; */
         flex: 1;
 		opacity: 0;
 		animation: fade 1s forwards; 
