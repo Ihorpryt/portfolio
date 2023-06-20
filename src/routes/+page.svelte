@@ -4,8 +4,19 @@
     import MainInfo from '../blocks/MainInfo.svelte';
     import Card from '../blocks/ProjectCards/Card.svelte';
     import Header from './Menu.svelte';
-	import cover from '$lib/images/Card 2.jpg'
-	
+	import cover1 from '$lib/images/Card 1.jpg'
+	import cover2 from '$lib/images/Card 2.jpg'
+	import cover3 from '$lib/images/Card 3.jpg'
+	import cover4 from '$lib/images/Card 4.jpg'
+	import cover5 from '$lib/images/Card 5.jpg'
+	import cover6 from '$lib/images/Card 6.jpg'
+	import pulse from '$lib/icons/decor/pulse.svg'
+	import marketplace from '$lib/icons/decor/marketplace.svg'
+	import fc from '$lib/icons/decor/fc.svg'
+	import pax from '$lib/icons/decor/pax.svg'
+	import sanvt from '$lib/icons/decor/sanvt.svg'
+	import x from '$lib/icons/decor/x.svg'
+    import Footer from '../blocks/Footer.svelte';
 
 </script>
 
@@ -30,24 +41,51 @@
 
 	<div class="work-row" id="portfolio">
 		<Card
-			cover={cover}
+			cover={cover1}
+			icon={pulse}
 			title="ExpensePulse™"
 			description="Changing the way business aviation trip expenses are compiled, audited, and reported."
 		 />
+		
 		 <Card
-			cover={cover}
+			cover={cover2}
+			icon={marketplace}
 			title="Staffing Marketplace™"
 			description="Connecting job seekers and employers for full-time and part-time opportunities as well as temporary assignments."
+			whiteText={true}
 		 />
+
+		 <Card
+		 cover={cover3}
+		 icon={fc}
+		 title="FC Dynamo Kyiv"
+		 description="Connecting job seekers and employers for full-time and part-time opportunities as well as temporary assignments."
+	 	 />
+
+		 <FeaturedClients />
+
+		 <Card
+		 cover={cover4}
+		 icon={pax}
+		 title="PAX App"
+		 description="High-performance optimization and management tool designed to enable seamless communication between crew and staff members, increase visibility into schedule and save costs on crew bookings."
+	 	 />
+
+		<Card
+		cover={cover5}
+		icon={sanvt}
+		title="SANVT"
+		description="Connecting job seekers and employers for full-time and part-time opportunities as well as temporary assignments."
+		/>
+
+		<Card
+		cover={cover6}
+		icon={x}
+		title="Personal Training Project X"
+		description="Connecting job seekers and employers for full-time and part-time opportunities as well as temporary assignments."
+		/>
 	</div>
-	<!-- <div class="work-row">
-		<div class="work-element work3">PAX App (Airshare/Portside)</div>
-		<div class="work-element work4">FC Dynamo Kyiv (Linecore)</div>
-	</div>
-	<div class="work-row">
-		<div class="work-element work5">SANVT (ColorElephant)</div>
-		<div class="work-element work6">Personal Training Project ()</div>
-	</div> -->
+	<Footer />
 </section>
 
 
