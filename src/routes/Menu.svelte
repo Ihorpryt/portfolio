@@ -146,7 +146,7 @@
 		background-color: rgba(255, 255, 255, 0.15);
 
 		/* background-color: rgba(255, 255, 255, 0.151); */
-		box-shadow: inset 0.5px 0.5px 0px rgba(255, 255, 255, 0.35), inset 0px 0px 12px 1px rgba(255, 255, 255, 0.15);
+		box-shadow: inset 0.5px 0.5px 0px rgba(255, 255, 255, 0.55),inset  -0.5px -0.5px 0px 0px rgba(255, 255, 255, 0.25), inset 0px 0px 12px 1px rgba(255, 255, 255, 0.15);
 	}
 	
 	/* Animations */

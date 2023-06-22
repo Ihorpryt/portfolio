@@ -28,7 +28,7 @@
         flex: 1;
 		opacity: 0;
 		animation: fade 1s forwards; 
-		animation-delay: 3.5s;
+		animation-delay: 3s;
 		overflow: hidden;
 	}
 	.work-element:hover .cover {
