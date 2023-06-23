@@ -5,8 +5,9 @@
 	export let description;
 	export let whiteText = false;
 	export let icon;
+	export let link;
 </script>
-<a href="#">
+<a href={link}>
 	<div class="work-element">
 		<div class="info">
 			<img src={icon} alt="" style="width: 24px;" />
@@ -33,6 +34,10 @@
 	}
 	.work-element:hover .cover {
 		transform: scale(1.15);
+		/* opacity: 0.2; */
+	}
+	.work-element:hover .description {
+		color: black;
 		/* opacity: 0.2; */
 	}
 	@keyframes fade {
@@ -65,6 +70,7 @@
 		font-family: 'MontrealMedium';
 		line-height: 20px;
 		opacity: 0.7;
+		transition: color 0.3s ease-in-out;
 		/* letter-spacing: 0.03em; */
 	}
 	.white {
@@ -83,5 +89,6 @@
 
 		z-index: -2;
 		transition: transform 0.3s ease-in-out;
+		
 	}
 </style>

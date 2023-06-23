@@ -16,6 +16,7 @@
 	import pax from '$lib/icons/decor/pax.svg'
 	import sanvt from '$lib/icons/decor/sanvt.svg'
 	import x from '$lib/icons/decor/x.svg'
+	import glass from '$lib/images/glass.jpeg'
     import Footer from '../blocks/Footer.svelte';
 
 </script>
@@ -37,10 +38,15 @@
 	<MainInfo />
 
 	<!-- <iframe src='https://my.spline.design/glassspheres-babee2be1ebcecb767457ea34f7f5e5a/' frameborder='0' width='100%' height='100%'></iframe> -->
+	<!-- <video autoplay loop width="100%" height='100%'>
+		<source src={video} type="video/mp4">
+	</video> -->
+	<img src={glass} alt="" width="100%" height='100%'>
 
 
 	<div class="work-row" id="portfolio">
 		<Card
+			link="/pulse"
 			cover={cover1}
 			icon={pulse}
 			title="ExpensePulse™"
@@ -109,14 +115,16 @@
 		padding-top: 48px;
 		margin-top: -90px;
 	}
-	iframe {
+	img {
 		position: absolute;
 		z-index: 0;
 		left:-170px;
 		bottom: 40px;
 		opacity: 0;
 		animation: fade 3s forwards;
+		object-fit: cover;
 	}
+
 	@keyframes fade {
 		0% {
 			opacity: 0;
