@@ -2,12 +2,13 @@
 <script>
 	import { page } from '$app/stores';
 	let y;
+	export let moveToBottom;
 	
 </script>
 
 	<svelte:window bind:scrollY={y} />
 
-	<header class:bottom={y != 0}>
+	<header class:bottom={y != 0 || moveToBottom == true} >
 		<nav>
 			<ul>
 				<div class="shine"></div>
