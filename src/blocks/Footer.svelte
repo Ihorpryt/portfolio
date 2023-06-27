@@ -14,7 +14,7 @@
         justify-content: center;
         height: 128px;
         width: 100%;
-        margin-top: 48px;
+        margin-top: 96px;
         margin-bottom: 48px;
     }
     .socials {

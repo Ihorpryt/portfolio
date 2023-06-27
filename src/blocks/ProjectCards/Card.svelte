@@ -36,10 +36,7 @@
 		transform: scale(1.15);
 		/* opacity: 0.2; */
 	}
-	.work-element:hover .description {
-		color: black;
-		/* opacity: 0.2; */
-	}
+
 	@keyframes fade {
 		0% {
 			opacity: 0;
@@ -89,6 +86,5 @@
 
 		z-index: -2;
 		transition: transform 0.3s ease-in-out;
-		
 	}
 </style>
