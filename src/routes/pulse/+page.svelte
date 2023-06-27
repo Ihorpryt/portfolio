@@ -18,7 +18,7 @@
 <Header moveToBottom={true} />
 
 <section>
-    <img src={cover1} alt="" />
+    <img src={cover1} class="top-image" alt="" />
     <!-- <img src={pulse} alt="" style="width: 24px;" /> -->
 
         <div class="two-elements">
@@ -76,7 +76,10 @@
         align-items: center;
         font-family: 'MontrealMedium';
     }
-
+    .top-image {
+        width: 100%;
+        height: 100%;
+    }
     .two-elements {
         width: 100%;
         display: flex;
