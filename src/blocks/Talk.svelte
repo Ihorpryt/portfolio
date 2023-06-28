@@ -1,5 +1,4 @@
-<a href="#">
-    <div class="talk talk-animation">
+<a href="#" class="talk talk-animation">
         <div class="top-text">
             <div class="ua-description">зв’язатись</div>
         </div>
@@ -8,18 +7,27 @@
                 <path class="message" d="M0 18.4603V9.5012C0 4.17972 4.37161 -0.116331 9.72547 0.00240326C14.7771 0.121138 18.9004 4.25527 18.9976 9.30691C19.0516 12.0054 17.9722 14.4557 16.2127 16.2151C14.4965 17.9314 12.1218 19 9.4988 19H0.539704C0.248264 19 0 18.7517 0 18.4603Z" />
             </svg>
         </span></div>
-    </div>
 </a>
 
 <style>
 	.talk {
 		border-radius: 10px;
 		padding: 14px 20px;
-		width: 150px;
+		flex: 1;
+		opacity: 0;
 		box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.7);
 		transition: background-color 0.3s;
 		overflow: hidden;
 		white-space: nowrap;
+		animation: fade 2s ease 2.5s forwards;
+	}
+	@keyframes fade {
+		0% {
+			opacity: 0%;
+		}
+		100% {
+			opacity: 100%;
+		}
 	}
 	.message {
 		fill: #47484A;

@@ -16,6 +16,8 @@
         width: 100%;
         margin-top: 96px;
         margin-bottom: 48px;
+        padding-left: 48px;
+        padding-right: 48px;
     }
     .socials {
         width: 100%;

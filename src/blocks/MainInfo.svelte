@@ -33,7 +33,7 @@
 		gsap.from(".name", { opacity: 0, width:0, duration: 1, delay:0.5});
 		gsap.from(".vector", { opacity: 0, duration: 1, delay:1});
 		gsap.from(".position", { opacity: 0, width:0, duration: 1, delay:1.5});
-		gsap.from(".talk-animation", { opacity: 0, width:0, duration: 1, delay:2});
+		// gsap.from(".talk-animation", { opacity: 0, width:0, duration: 1, delay:2});
 	});
 
 
@@ -84,7 +84,7 @@
 		background: #C2EF56;
 		border-radius: 10px;
 		padding: 14px 20px;
-		width: 370px;
+		width: fit-content;
 		overflow: hidden;
 		white-space: nowrap;
 	}
@@ -92,35 +92,9 @@
 		background: #B9ACF2;
 		border-radius: 10px;
 		padding: 14px 20px;
-		width: 650px;
+		width: fit-content;
 		overflow: hidden;
 		white-space: nowrap;
-	}
-	.talk {
-		border-radius: 10px;
-		padding: 14px 20px;
-		width: 150px;
-		box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.7);
-		transition: background-color 0.3s;
-		overflow: hidden;
-		white-space: nowrap;
-	}
-	.message {
-		fill: #47484A;
-	}
-	.talk:hover {
-		background-color:rgba(0, 0, 0, 0.7);
-		color: white;
-	}
-	.talk:hover .ua-description {
-		color: white;
-		opacity: 1;
-	}
-	.talk:hover .main-text {
-		color: white;
-	}
-	.talk:hover .message {
-		fill: white;
 	}
 	.top-text {
 		display: flex;
@@ -171,4 +145,10 @@
 	.vector {
 		opacity: 1;
 	}
+
+	@media (max-width: 480px) {
+		.main-info {
+			flex-wrap: wrap;
+		}
+	} 
 </style>

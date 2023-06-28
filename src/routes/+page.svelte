@@ -17,7 +17,6 @@
 	import sanvt from '$lib/icons/decor/sanvt.svg'
 	import x from '$lib/icons/decor/x.svg'
 	import glass from '$lib/images/glass.jpeg'
-    import Footer from '../blocks/Footer.svelte';
 
 </script>
 
@@ -91,7 +90,6 @@
 		description="Connecting job seekers and employers for full-time and part-time opportunities as well as temporary assignments."
 		/>
 	</div>
-	<Footer />
 </section>
 
 
