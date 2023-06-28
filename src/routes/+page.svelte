@@ -134,5 +134,10 @@
 			opacity: 1;
 		}
 	}
+	@media (max-width: 480px) {
+		img {
+			display: none;
+		}
+	} 
 
 </style>

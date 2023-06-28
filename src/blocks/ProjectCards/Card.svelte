@@ -87,4 +87,10 @@
 		z-index: -2;
 		transition: transform 0.3s ease-in-out;
 	}
+	@media (max-width: 480px) {
+		.cover {
+			min-height: 420px;
+		}
+		.info {display: none;}
+	} 
 </style>
