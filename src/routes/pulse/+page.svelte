@@ -252,5 +252,28 @@
 		z-index: -2;
 		transition: transform 0.3s ease-in-out;
     }
+
+
+    @media (max-width: 480px) {
+		section {
+			overflow: hidden;
+            width: 100%;
+		}
+        .content-spread {
+            flex-direction: column;
+        }
+        .body-text {
+            margin-right: 0;
+        }
+        .two-elements {
+            flex-direction: column;
+        }
+        .grid {
+            margin-right: 0;
+        }
+        .cover {
+            width: 100%;
+        }
+	} 
     
 </style>
